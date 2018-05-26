@@ -14,9 +14,8 @@ cp ../.simplecov .
 # Parse sec1 array
 cfg_parser $DIR_TEST/array.ini
 cfg_section_sec1
-echo "$var1"
-[ "$var1" = foo ] || return 1
-[ "${var1[1]}" = bar ] || return 1
+[ $var1 = foo ] || return 1
+[ ${var1[1]} = bar ] || return 1
 
 # Update sec2 var
 var2=foo_new
@@ -26,9 +25,8 @@ cfg_writer > array.out
 # Parse sec1 array again
 cfg_parser array.out
 cfg_section_sec1
-echo "$var1"
-[ "$var1" = foo ] || return 1
-[ "${var1[1]}" = bar ] || return 1
+[ $var1 = foo ] || return 1
+[ ${var1[1]} = bar ] || return 1
 }
 
 test_expect_success "Parse array" "
