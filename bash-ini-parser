@@ -31,6 +31,7 @@ function cfg_parser {
    debug "escaped ["
    ini="${ini//]/\\]}"
    debug "escaped ]"
+   OLDIFS="$IFS"
    IFS=$'\n' && ini=( ${ini} )  # convert to line-array
    debug
    ini=( ${ini[*]/#*([[:space:]]);*/} )
@@ -79,6 +80,7 @@ function cfg_parser {
    then
       shopt -u extglob
    fi
+   IFS="$OLDIFS"
    return $EVAL_STATUS
 }
 
