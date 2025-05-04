@@ -1,11 +1,10 @@
-## bash-ini-parser
-[![Build Status](https://travis-ci.org/albfan/bash-ini-parser.svg?branch=master)](https://travis-ci.org/albfan/bash-ini-parser)
+# bash-ini-parser
 
 A ini file parser for bash relying only on builtins
 
-### Usage
+# Usage
 
-You must copy [bash-ini-parser](https://github.com/albfan/bash-ini-parser/blob/master/bash-ini-parser) on your project and source it:
+You must copy [bash-ini-parser](https://github.com/ironiq/bash-ini-parser/blob/master/bash-ini-parser) on your project and source it:
 
     $ source bash-ini-parser
 
@@ -31,16 +30,16 @@ Will declare functions per ini section called cfg&#95;section&#95;&lt;section&gt
     $ echo $key2
     value2
 
-### Example
+# Example
 
-Goto scripts directory and launch [example.sh](https://github.com/albfan/bash-ini-parser/blob/master/scripts/example.sh)
+Goto scripts directory and launch [example.sh](https://github.com/ironiq/bash-ini-parser/blob/master/scripts/example.sh)
 
     $ cd scripts
     $ ./example.sh
 
 Inspect its code, reuse on your scripts
 
-### Updating and saving changes
+## Updating and saving changes
 
 To update a value
 
@@ -53,15 +52,15 @@ To save changes
 
 > Take care that saving function will loose comments and indentation, use with care
 
-### Checking a ini file
+## Checking a ini file
 
-If you want to test your existing ini file use [getkeyfromsection.sh](https://github.com/albfan/bash-ini-parser/blob/master/scripts/getkeyfromsection.sh)
+If you want to test your existing ini file use [getkeyfromsection.sh](https://github.com/ironiq/bash-ini-parser/blob/master/scripts/getkeyfromsection.sh)
 
     $ getkeyfromsection.sh <file.ini> sectionname keyname
 
 e.g.:
 
-See [file.ini](https://github.com/albfan/bash-ini-parser/blob/master/scripts/file.ini), it is a file with different indentations, and comments 
+See [file.ini](https://github.com/ironiq/bash-ini-parser/blob/master/scripts/file.ini), it is a file with different indentations, and comments 
 
 Issuing:
 
@@ -85,11 +84,11 @@ Outputs:
 
     var4 value is "pivo"
 
-### Debugging
+## Debugging
 
 declare `BASH_INI_PARSER_DEBUG` and parse will output the ini file processing
-    
-### Drawbacks
+
+# Drawbacks
 
 This is more a hack than a reliable parser, so keep in mind things like
 
@@ -97,14 +96,8 @@ This is more a hack than a reliable parser, so keep in mind things like
 
 For a trusted parser (but based on python) checkout [crudini](https://github.com/pixelb/crudini)
 
-### Alternatives
+# Alternatives
 
+[bash_ini_parser](https://github.com/albfan/bash_ini_parser) The origin of this repo.
 [bash_ini_parser](https://github.com/rudimeier/bash_ini_parser) a slightly different approach.
 
-### Who is using bash-ini-parser?
-
-- https://github.com/CHN-STUDENT/WebServerAutoBackup
-
-### Credits
-
-This is just an enhacement from [a blog post](https://web.archive.org/web/20180124065211/theoldschooldevops.com/2008/02/09/bash-ini-parser/)
