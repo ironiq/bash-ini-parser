@@ -1,2 +1,12 @@
+autom4te.cache/
 t/test-results/
 t/tapout
+
+aclocal.m4
+config.log
+config.status
+configure
+Makefile
+Makefile.in
+build-aux/install-sh
+build-aux/missing
