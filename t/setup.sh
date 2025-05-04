@@ -2,7 +2,7 @@
 
 SHARNESS_TEST_EXTENSION="bash"
 
-export GEM_PATH=${GEM_PATH}:/home/alberto/.gem/ruby/2.2.0
+export GEM_PATH=${GEM_PATH}:${HOME}/.gem/ruby/2.2.0
 
 if test "${COVERAGE}" = "yes"
 then
