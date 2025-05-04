@@ -12,7 +12,7 @@ or
 
     $ . bash-ini-parser
 
-Then, gived a properties file (file.ini):
+Then, there is a properties file (file.ini):
 
     [section]
        key = value
@@ -22,7 +22,7 @@ Issuing:
 
     $ cfg_parser file.ini
 
-Will declare functions per ini section called **cfg&#95;section&#95;&lt;section&gt;** which declares variables named as keynames so you can access its values using
+Will declare functions per ini section called *cfg&#95;section&#95;&lt;section&gt;* which declares variables named as keynames so you can access its values using
 
     $ cfg_section_<section>
     $ echo $key
@@ -45,7 +45,7 @@ To save changes
 
 # Example
 
-Goto scripts directory and launch [example.sh](https://github.com/ironiq/bash-ini-parser/blob/master/scripts/example.sh)
+Goto scripts directory and launch [example.sh](https://github.com/ironiq/bash-ini-parser/blob/main/scripts/example.sh)
 
     $ cd scripts
     $ ./example.sh
@@ -54,13 +54,13 @@ Inspect its code, reuse on your scripts
 
 # Checking an ini file
 
-If you want to test your existing ini file use [getkeyfromsection.sh](https://github.com/ironiq/bash-ini-parser/blob/master/scripts/getkeyfromsection.sh)
+If you want to test your existing ini file use [getkeyfromsection.sh](https://github.com/ironiq/bash-ini-parser/blob/main/scripts/getkeyfromsection.sh)
 
     $ getkeyfromsection.sh <file.ini> sectionname keyname
 
 e.g.:
 
-See [file.ini](https://github.com/ironiq/bash-ini-parser/blob/master/scripts/file.ini), it is a file with different indentations, and comments 
+See [file.ini](https://github.com/ironiq/bash-ini-parser/blob/main/scripts/file.ini), it is a file with different indentations, and comments
 
 Issuing:
 
@@ -86,7 +86,7 @@ Outputs:
 
 # Debugging
 
-declare *BASH_INI_PARSER_DEBUG* and parse will output the ini file processing
+declare **BASH_INI_PARSER_DEBUG** and parse will output the ini file processing
 
 # Hacking zone
 
