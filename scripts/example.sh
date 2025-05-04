@@ -2,14 +2,14 @@
 
 TEST_FILE="${1:-file.ini}"
 
-source ../bash-ini-parser
+source $(dirname $0)/../bash-ini-parser
 
 echo show example file
 echo
-cat $TEST_FILE
+cat ${TEST_FILE}
 
-echo parsing $TEST_FILE
-cfg_parser "$TEST_FILE"
+echo parsing ${TEST_FILE}
+cfg_parser "${TEST_FILE}"
 echo
 
 echo show file parsed
@@ -22,16 +22,16 @@ echo
 echo enable section \'sec2\'
 cfg_section_sec2
 
-echo "var2 value is \"$var2\""
+echo "var2 value is \"${var2}\""
 echo "var5[1] value is \"${var5[1]}"\"
 echo "var5[*] value is \"${var5[*]}"\"
-echo "var4 value is \"$var4"\"
+echo "var4 value is \"${var4}"\"
 
 echo
 echo enable section \'sec1\'
 cfg_section_sec1
 
-echo "var2 value is \"$var2\""
+echo "var2 value is \"${var2}\""
 
 echo
 echo update values:
@@ -46,7 +46,7 @@ cfg_update sec2 var1
 
 # note you don't need to load section to update it
 cfg_section_sec1
-echo sec1.var1 value is \"$var1\"
+echo sec1.var1 value is \"${var1}\"
 
 cfg_section_sec2
-echo sec2.var1 value is \"$var1\"
+echo sec2.var1 value is \"${var1}\"
