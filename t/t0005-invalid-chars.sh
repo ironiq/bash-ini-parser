@@ -4,19 +4,20 @@ test_description="replace invalid chars"
 
 . setup.sh
 
-DIR_TEST=$SHARNESS_TEST_DIRECTORY/t0005
+DIR_TEST=$SHARNESS_TEST_DIRECTORY/t0009
 
 #replace function
-function replace_chars() { 
-  if [[ $i =~ .*=.* ]]
-  then
-    local key=$(echo $1 | sed 's/\(.*\)=.*/\1/;s/-/_/g')
-    local value=$(echo $1 | sed 's/.*=\(.*\)/\1/')
-    echo "$key=$value"
-  else
-    echo $1
-  fi
+function replace_chars() {
+	if [[ $i =~ .*=.* ]]
+	then
+		local key=$(echo $1 | sed 's/\(.*\)=.*/\1/;s/-/_/g')
+		local value=$(echo $1 | sed 's/.*=\(.*\)/\1/')
+		echo "${key}=${value}"
+	else
+		echo $1
+	fi
 }
+
 #export function to be avaliable on bash-ini-parser script
 export -f replace_chars
 #define var to use function inside bash-ini-parser
