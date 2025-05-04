@@ -26,6 +26,7 @@ function cfg_parser {
    ini=${ini//$'\r'/}           # remove linefeed i.e dos2unix
    ini="${ini//$/}"             # remove executable
    ini="${ini//'`'/}"           # remove executable
+   ini=$(echo "${ini}" | awk NF)    # Remove the empty lines.
 
    ini="${ini//[/\\[}"
    debug "escaped ["
