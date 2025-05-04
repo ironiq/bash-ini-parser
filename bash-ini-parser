@@ -24,6 +24,8 @@ function cfg_parser {
 	fi
 	ini="$(<$1)"					# read the file
 	ini=${ini//$'\r'/}				# remove linefeed i.e dos2unix
+	ini="${ini//$/}"				# remove executable
+	ini="${ini//'`'/}"				# remove executable
 	ini=$(echo "${ini}" | awk NF)			# Remove the empty lines.
 
 	ini="${ini//[/\\[}"
@@ -80,6 +82,8 @@ function cfg_parser {
 	debug
 	ini[${#ini[*]} + 1]='}'				# add the last brace
 	debug
+<<<<<<< HEAD
+=======
 	if [ -v "REPLACE_FUNCTION" ]
 	then
 		ini=($(for i in "${ini[@]}"
@@ -88,6 +92,7 @@ function cfg_parser {
 		done))
 	fi
 	debug
+>>>>>>> main
 	eval "$(echo "${ini[*]}")"			# eval the result
 	EVAL_STATUS=$?
 	if [ ${CHANGE_EXTGLOB} = 1 ]
