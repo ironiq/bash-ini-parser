@@ -24,7 +24,7 @@ test_expect_success "var1[1] is bar" "
 var2=foo_new
 cfg_update sec2 var2
 cfg_writer > array.out
-  
+
 # Parse sec1 array again
 cfg_parser array.out
 cfg_section_sec1
