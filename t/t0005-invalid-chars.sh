@@ -4,7 +4,7 @@ test_description="replace invalid chars"
 
 . setup.sh
 
-DIR_TEST=$SHARNESS_TEST_DIRECTORY/t0005
+DIR_TEST=$SHARNESS_TEST_DIRECTORY/t0009
 
 #replace function
 function replace_chars() {
